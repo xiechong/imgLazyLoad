@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>imgLazyLoad</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #div1 {
+        width: 520px;
+        margin: 30px auto;
+        border: 1px solid red;
+        overflow: hidden;
+    }
+
+    li {
+        width: 160px;
+        height: 160px;
+        float: left;
+        list-style: none;
+        margin: 5px;
+        border: 1px dashed green;
+    }
+    img{
+        width:100%
+    }
+</style>
+<body>
+<div id="div1">
+    <ul>
+        <li><img class="lazy" src="http://imgstore.cdn.sogou.com/app/a/100540002/1170473_s_90_2_219x160.jpg" data-original="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3255492702,1431047136&fm=23&gp=0.jpg" /></li>
+        <li><img class="lazy" src="http://imgstore.cdn.sogou.com/app/a/100540002/1170473_s_90_2_219x160.jpg" data-original="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3479001473,3214547075&fm=23&gp=0.jpg" /></li>
+        <li><img class="lazy" src="http://imgstore.cdn.sogou.com/app/a/100540002/1170473_s_90_2_219x160.jpg" data-original="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2949816049,3509890482&fm=23&gp=0.jpg" /></li>
+        <li><img class="lazy" src="http://imgstore.cdn.sogou.com/app/a/100540002/1170473_s_90_2_219x160.jpg" data-original="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1723220751,1997049374&fm=23&gp=0.jpg" /></li>
+        <li><img class="lazy" src="http://imgstore.cdn.sogou.com/app/a/100540002/1170473_s_90_2_219x160.jpg" data-original="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2028595801,3494564973&fm=23&gp=0.jpg" /></li>
+        <li><img class="lazy" src="http://imgstore.cdn.sogou.com/app/a/100540002/1170473_s_90_2_219x160.jpg" data-original="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1471866897,1425193311&fm=23&gp=0.jpg" /></li>
+        <li><img class="lazy" src="http://imgstore.cdn.sogou.com/app/a/100540002/1170475_s_90_2_219x160.jpg" data-original="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3212984247,2711450243&fm=23&gp=0.jpg" /></li>
+        <li><img class="lazy" src="http://imgstore.cdn.sogou.com/app/a/100540002/1170477_s_90_2_219x160.jpg" data-original="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2542971004,419662501&fm=23&gp=0.jpg" /></li>
+        <li><img class="lazy" src="http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg" data-original="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1786892883,4170643759&fm=23&gp=0.jpg" /></li>
+        <li><img class="lazy" src="http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg" data-original="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=476038748,1351992046&fm=23&gp=0.jpg" /></li>
+        <li><img class="lazy" src="http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg" data-original="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3958435178,397080165&fm=23&gp=0.jpg" /></li>
+        <li><img class="lazy" src="http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg" data-original="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=882833306,282658029&fm=23&gp=0.jpg" /></li>
+        <li><img class="lazy" src="http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg" data-original="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=4047843112,1660396460&fm=23&gp=0.jpg" /></li>
+        <li><img class="lazy" src="http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg" data-original="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3106343519,503826224&fm=23&gp=0.jpg" /></li>
+        <li><img class="lazy" src="http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg" data-original="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2326738771,9305249&fm=23&gp=0.jpg" /></li>
+        <li><img class="lazy" src="http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg" data-original="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=733680680,859913619&fm=23&gp=0.jpg" /></li>
+        <li><img class="lazy" src="http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg" data-original="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3734625973,3173267304&fm=23&gp=0.jpg" /></li>
+        <li><img class="lazy" src="http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg" data-original="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3251837567,3299953018&fm=23&gp=0.jpg" /></li>
+        <li><img class="lazy" src="http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg" data-original="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2578261018,2346211299&fm=23&gp=0.jpg" /></li>
+        <li><img class="lazy" src="http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg" data-original="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=94060096,4248763300&fm=23&gp=0.jpg" /></li>
+        <li><img class="lazy" src="http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg" data-original="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3612162699,1320024191&fm=23&gp=0.jpg" /></li>
+        <li><img class="lazy" src="http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg" data-original="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2313041955,732263015&fm=23&gp=0.jpg" /></li>
+        <li><img class="lazy" src="http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg" data-original="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3838895083,3338228196&fm=23&gp=0.jpg" /></li>
+        <li><img class="lazy" src="http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg" data-original="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3530178830,2494790495&fm=23&gp=0.jpg" /></li>
+        <li><img class="lazy" src="http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg" data-original="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3747731476,1894636403&fm=23&gp=0.jpg" /></li>
+        <li><img class="lazy" src="http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg" data-original="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1823074846,3032387715&fm=23&gp=0.jpg" /></li>
+        <li><img class="lazy" src="http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg" data-original="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2067476667,3500107685&fm=23&gp=0.jpg" /></li>
+    </ul>
+</div>
+<script src="js/lazyLoad.js"></script>
+</body>
+</html>
